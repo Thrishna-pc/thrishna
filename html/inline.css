@@ -1,0 +1,12 @@
+.vehicle-list {
+    color: chocolate;
+    font-family: 'OCR A Std', monospace;
+    font-size: 16px;
+    padding-left: 30px;
+}
+
+
+body {
+    margin: 20px;
+}
+

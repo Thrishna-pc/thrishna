@@ -1,0 +1,129 @@
+
+<html>
+<head>
+<title>Registration Form (No Border)</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    form {
+        background-color: white;
+        padding: 30px 40px;
+        width: 400px;
+        border-radius: 8px;
+    }
+
+    h2 {
+        text-align: center;
+        text-decoration: underline;
+        color: black;
+    }
+
+    label {
+        display: inline-block;
+        width: 120px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    input[type="email"],
+    select,
+    textarea {
+        width: 230px;
+        padding: 6px;
+        margin-bottom: 10px;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+
+   fieldset {
+    border: none;
+}
+    legend {
+        font-weight: bold;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        margin-right: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+</style>
+</head>
+
+<body>
+    <form>
+        <h2>REGISTRATION FORM</h2>
+
+        <label>Name:</label>
+        <input type="text" name="name"><br>
+        <label>Email:</label>
+        <input type="email" name="email"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br>
+		<label>Mobile:</label>
+		<input type="number" name="mobile">
+		<label>DoB:</label>
+        <input type="date" name="dob"><br>
+        <label>Address:</label>
+        <textarea name="address" id="address" cols="20" rows="2"></textarea><br>
+        <br>
+        
+        
+        
+       
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" checked> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="others"> Others
+        <br>
+
+        <label>Nationality:</label>
+        <select name="nationality" id="nationality">
+            <option value="">Select</option>
+            <option value="american">American</option>
+            <option value="indian">Indian</option>
+            <option value="british">British</option>
+            <option value="others">Others</option>
+        </select><br>
+
+        <fieldset style="border:1px solid black; padding:10px;">
+    <legend><b>Language Known:</b></legend>
+    <label><input type="checkbox" name="language" value="malayalam"> Malayalam</label><br>
+    <label><input type="checkbox" name="language" value="english"> English</label><br>
+    <label><input type="checkbox" name="language" value="hindi"> Hindi</label><br>
+		</fieldset><br>
+
+
+        <input type="submit" value="Submit">
+        <input type="submit" value="Cancel">
+    </form>
+</body>
+</html>

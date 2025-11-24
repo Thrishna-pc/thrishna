@@ -1,0 +1,113 @@
+<html> 
+<head> 
+    <title>Registration Form</title> 
+    <style> 
+       body { 
+            font-family: Arial, sans-serif; 
+            display: flex; 
+            justify-content: center;    
+            align-items: center;          
+        } 
+        form { 
+            padding: 20px 30px; 
+            width: 400px; 
+            background: white; 
+            border-radius: 8px; 
+        } 
+         
+       
+        label { 
+            display: inline-block; 
+            width: 150px; 
+        } 
+        input[type="text"], 
+        input[type="password"], 
+        input[type="number"], 
+        textarea { 
+            width: 210px; 
+            padding: 6px 8px; 
+            outline: 1px solid #ccc; 
+            border-radius: 3px; 
+        } 
+        button { 
+            padding: 6px 15px; 
+            margin: 5px; 
+        } 
+    </style> 
+    <script> 
+        function validate() { 
+            var name = 
+document.getElementById("nam").value; 
+            var passwd = 
+document.getElementById("pwd").value; 
+            var confirmPass = 
+document.getElementById("pwd2").value; 
+            var phone = 
+document.getElementById("pno").value; 
+            if (name == "") { 
+                alert('Name cannot be blank'); 
+                return false; 
+            } 
+            else if (!isNaN(name)) { 
+                alert('Name requires alphabets!'); 
+                return false; 
+            } 
+            else if (passwd == "") { 
+                alert('Enter a Password'); 
+                return false; 
+            } 
+            else if (passwd.length < 8) { 
+                alert('Password requires at least 8 
+characters'); 
+                return false; 
+            } 
+            else if (confirmPass == "") { 
+                alert('Please confirm your 
+password'); 
+                return false; 
+            } 
+            else if (passwd !== confirmPass) { 
+                alert('Passwords do not match!'); 
+                return false; 
+            } 
+            else if (phone == "") { 
+                alert('Enter your phone number!'); 
+                return false; 
+            } 
+            else if (isNaN(phone)) { 
+                alert('Invalid Phone Number'); 
+                return false; 
+            } 
+            else if (phone.length != 10) { 
+                alert('Not a Valid Phone Number (need 
+10 digits)'); 
+                return false; 
+            } 
+            else { 
+                alert('Thank You for Registration'); 
+                return true; 
+            } 
+        } 
+    </script> 
+</head> 
+<body> 
+    <form style="width:900px; position:relative;" 
+onsubmit="return validate();"> 
+        <h2>REGISTRATION FORM</h2><br> 
+        <label>Name:</label> 
+        <input type="text" placeholder="Name" 
+id="nam"><br><br> 
+        <label>Password:</label> 
+        <input type="password" id="pwd"><br><br> 
+        <label>Confirm Password:</label> 
+        <input type="password" id="pwd2"><br><br> 
+        <label>Phone Number:</label> 
+        <input type="text" placeholder="Phone Number" 
+id="pno"><br><br> 
+        <div class="button-center"> 
+            <button type="submit">Submit</button> 
+            <button type="reset">Cancel</button> 
+        </div> 
+    </form> 
+</body> 
+</html>
